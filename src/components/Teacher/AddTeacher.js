@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./AddParent.css"; 
+import "./AddTeacher.css"; 
 
-function AddParent() {
+function AddTeacher() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [employee_number, setEmployeeNumber] = useState("");
     const [national_id, setNationalId] = useState("");
     const [home_location, setHomeLocation] = useState("");
     const [phone_number, setPhoneNumber] = useState("");
@@ -17,13 +19,15 @@ function AddParent() {
         e.preventDefault();
         console.log(`added parent name ${name}`)
 
-        axios.post("http://localhost:8080/newParent", {
+        axios.post("http://localhost:8080/newTeacher", {
             name: name,
             email: email,
             national_id: national_id,
             home_location: home_location,
+            subject: subject,
+            employee_number: employee_number,
             phone_number: phone_number,
-            user_name: user_name,
+            user_name: user_name,            
             password: password,
         })
         .then(() => {
@@ -37,7 +41,7 @@ function AddParent() {
 
     return (
         <div className="add-parent-container">
-            <h1 className="title">Register Parent</h1>
+            <h1 className="title">Register Teacher</h1>
             <form className="add-parent-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="name">Name:</label>
@@ -104,6 +108,32 @@ function AddParent() {
                 </div>
 
                 <div className="form-group">
+                    <label htmlFor="subject">Subject:</label>
+                    <input
+                        type="subject"
+                        id="subject"
+                        className="form-control"
+                        value={subject}
+                        onChange={(e) => setSubject(e.target.value)}
+                        placeholder="Enter the subject you teach"
+                        required
+                    />
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="e">Employee Number:</label>
+                    <input
+                        type="employee_number"
+                        id="employee_number"
+                        className="form-control"
+                        value={employee_number}
+                        onChange={(e) => setEmployeeNumber(e.target.value)}
+                        placeholder="Enter employee number"
+                        required
+                    />
+                </div>
+
+                <div className="form-group">
                     <label htmlFor="user_name">User Name:</label>
                     <input
                         type="user_name"
@@ -115,7 +145,6 @@ function AddParent() {
                         required
                     />
                 </div>
-
 
                 <div className="form-group">
                     <label htmlFor="password">Password:</label>
@@ -130,11 +159,11 @@ function AddParent() {
                     />
                 </div>
                 <button type="submit" className="submit-button">
-                    Add Parent
+                    Add Teacher
                 </button>
             </form>
         </div>
     );
 }
 
-export default AddParent;
+export default AddTeacher;

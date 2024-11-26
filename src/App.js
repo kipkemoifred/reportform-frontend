@@ -1,8 +1,9 @@
 
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Parents from "./components/Parent/Parents";
-// import AddParent from "./components/Parent/AddParent";
+// import Parents from "./components/Parent/Parents";
+import AddParent from "./components/Parent/AddParent";
+import AddStudent from "./components/Student/AddStudent";
 import EditParent from "./components/Parent/EditParent";
 import Login from "./components/Auth/Login";
 import StudentManagement from "./components/Student/StudentManagement"
@@ -12,6 +13,13 @@ import MarksManagement from './components/Marks/MarksManagement';
 import FeesManagement from './components/Fees/FeesManagement';
 import ParentManagement from './components/Parent/ParentManagement';
 import ResetPassword from './components/reset_password/ResetPassword';
+
+import Home from './components/Home';
+import ContactUs from './components/ContactUs';
+import AboutUs from './components/AboutUs';
+import Register from './components/Auth/Register';
+import AddAccountant from './components/Accountant/AddAccountant';
+import AddTeacher from './components/Teacher/AddTeacher';
 
 function App() {
   return (
@@ -25,6 +33,39 @@ function App() {
                                 Home
                             </Link>
                         </li>
+
+                        <li>
+                            <Link to="/about_us" className="nav-link">
+                                 About Us
+                            </Link>
+                      
+                        </li>
+
+
+                        <li>
+                            <Link to="/contact_us" className="nav-link">
+                                 Contact Us
+                            </Link>
+                      
+                        </li>
+
+
+                        <li>
+                            <Link to="/register" className="nav-link">
+                                 Register
+                            </Link>
+                      
+                        </li>
+
+
+                        <li>
+                            <Link to="/login" className="nav-link">
+                                 Login
+                            </Link>
+                      
+                        </li>
+
+{/*                         
                         <li>
                             <Link to="/parent" className="nav-link">
                                  Parent
@@ -76,7 +117,7 @@ function App() {
                             Reset Password
                             </Link>
                       
-                        </li>
+                        </li> */}
                       
                       
                     </ul>
@@ -84,8 +125,19 @@ function App() {
             </header>
             <main className="main-content">
                 <Routes>
-                    <Route path="/" element={<Parents />} />
-                    <Route path="/parent" element={<ParentManagement />} />
+                    {/* <Route path="/" element={<Parents />} /> */}
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about_us" element={<AboutUs />} />
+                    <Route path="/contact_us" element={<ContactUs />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/login" element={<Login />} />
+
+
+                  <Route path="/add_parent" element={<AddParent />} />
+                  <Route path="/add_student" element={<AddStudent />} />
+                  <Route path="/add_teacher" element={<AddTeacher />} />
+                  <Route path="/add_accountant" element={<AddAccountant />} />
+                    {/* 
                     <Route path="/login" element={<Login />} />
                     <Route path="/edit/:id" element={<EditParent />} />
                     <Route path="/student" element={<StudentManagement />} />
@@ -93,7 +145,7 @@ function App() {
                     <Route path="/accountant" element={<AccountantManagement />} />
                     <Route path="/marks" element={<MarksManagement />} />
                     <Route path="/fees" element={<FeesManagement />} />
-                    <Route path="/reset_password" element={<ResetPassword />} />
+                    <Route path="/reset_password" element={<ResetPassword />} /> */}
                 </Routes>
             </main>
         </div>

@@ -1,0 +1,58 @@
+/* Container Styling */
+.grid-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Title Styling */
+  .grid-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Grid Layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  /* Card Styling */
+  .grid-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+  }
+  
+  .grid-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Image Styling */
+  .grid-card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  /* Card Title */
+  .grid-card-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #4caf50;
+  }
+  
