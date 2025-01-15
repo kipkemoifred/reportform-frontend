@@ -7,7 +7,7 @@ import AccountantForm from "./AccountantForm";
 function AddAccountant() {
 
 
-    const [accountants, setAccountants] = useState([]);
+    // const [accountants, setAccountants] = useState([]);
     const [selectedAccountant, setSelectedAccountant] = useState(null);
     const [error, setError] = useState("");
     const navigate = useNavigate();
