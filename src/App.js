@@ -20,6 +20,7 @@ import AboutUs from './components/AboutUs';
 import Register from './components/Auth/Register';
 import AddAccountant from './components/Accountant/AddAccountant';
 import AddTeacher from './components/Teacher/AddTeacher';
+import ParentDashboard from './components/dashboards/ParentDashboard';
 
 function App() {
   return (
@@ -131,6 +132,7 @@ function App() {
                     <Route path="/contact_us" element={<ContactUs />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/parent_dashboard" element={<ParentDashboard />} />
 
 
                   <Route path="/add_parent" element={<AddParent />} />

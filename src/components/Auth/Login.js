@@ -27,7 +27,7 @@ function Login() {
         //navigate to respective home page student/parent->fees/marks uneditable
         //teacher- can edit students marks
         //accountant can edit student's fees
-        navigate("/");
+        navigate("/parent_dashboard");
       })
       .catch((error) => {
         setErrorMessage(

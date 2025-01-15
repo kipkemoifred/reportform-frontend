@@ -1,0 +1,85 @@
+.App {
+    display: flex;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 240px; /* Sidebar width */
+  }
+  
+  .sidebar {
+    width: 240px;
+    height: 100vh;
+    background-color: #2f3a42;
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+  }
+  
+  .logo {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .menu {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .menu li:hover {
+    background-color: #3e4b56;
+  }
+  
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-bar input {
+    padding: 5px 10px;
+    width: 200px;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  
+  .dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #f4f6f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card h3 {
+    margin-bottom: 10px;
+  }
+  
