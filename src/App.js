@@ -4,15 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 // import Parents from "./components/Parent/Parents";
 import AddParent from "./components/Parent/AddParent";
 import AddStudent from "./components/Student/AddStudent";
-import EditParent from "./components/Parent/EditParent";
 import Login from "./components/Auth/Login";
-import StudentManagement from "./components/Student/StudentManagement"
-import TeacherManagement from './components/Teacher/TeacherManagement';
-import AccountantManagement from './components/Accountant/AccountantManagement';
-import MarksManagement from './components/Marks/MarksManagement';
-import FeesManagement from './components/Fees/FeesManagement';
-import ParentManagement from './components/Parent/ParentManagement';
-import ResetPassword from './components/reset_password/ResetPassword';
 
 import Home from './components/Home';
 import ContactUs from './components/ContactUs';

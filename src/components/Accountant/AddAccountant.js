@@ -27,6 +27,7 @@ function AddAccountant() {
       setSelectedAccountant(null);
     } catch (err) {
       setError("Failed to save accountant"+err);
+      console.log(error)
     }
   };
 
